@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Weather APP</h1>
+        <div
+        class="containter">
+         <p class="tab" data-userWeather>Your Weather</p>
+         <p class="tab" data-serachWeather>Search Weather</p>
+
+    </div>
+    <div class="weather-content">
+        <div class="grant-location-container">
+          <img
+        </div>
+        <div class="searchWeather">
+            <h2>Search Weather</h2>
+            <input type="text" data-search>
+            <button data-searchBtn>Search</button>
+            <p>City: <span data-city></span></p>
+            <p>Temperature: <span data-temp></span></p>
+            <p>Humidity: <span data-humidity></span></p>
+            <p>Wind Speed: <span data-wind></span></p>
+        </div>
+    </div>
+      
+    <script src="/api/script.js"></script>
+</body>
+</html>
