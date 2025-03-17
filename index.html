@@ -3,32 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/api/style.css"> <!-- Fixed missing 'rel' attribute -->
 </head>
 <body>
     <div class="wrapper">
         <h1>Weather APP</h1>
-        <div
-        class="containter">
-         <p class="tab" data-userWeather>Your Weather</p>
-         <p class="tab" data-serachWeather>Search Weather</p>
-
-    </div>
-    <div class="weather-content">
-        <div class="grant-location-container">
-          <img
+        <div class="container">
+            <p class="tab" data-userWeather>Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
         </div>
-        <div class="searchWeather">
-            <h2>Search Weather</h2>
-            <input type="text" data-search>
-            <button data-searchBtn>Search</button>
-            <p>City: <span data-city></span></p>
-            <p>Temperature: <span data-temp></span></p>
-            <p>Humidity: <span data-humidity></span></p>
-            <p>Wind Speed: <span data-wind></span></p>
+        <div class="weather-content">
+            <div class="grant-location-container">
+                <img src="/api/images/location.png" alt="location" width="80" height="80" loading="lazy">
+                <p>Grant Location Access</p>
+                <p>Allow access to your location to get your current weather</p>
+                <button class="btn" data-grantAccess>Grant Access</button>
+            </div>
+            <div class="searchWeather" data-searchForm>
+                <h1>Search Weather</h1>
+                <input type="text" placeholder="Search for city" data-searchInput>
+                <button data-searchBtn class="btn">
+                    <img src="/api/images/search.png" alt="search" width="20" height="20" loading="lazy">
+                </button>
+            </div>
+            <div class="loading-container" data-loading>
+                <img src="/api/images/loading.gif" alt="loading" width="150" height="150" loading="lazy">
+            </div>
+        </div>
+        <div class="user-info-container">
+            <div class="name">
+                <p data-cityName></p>
+                <img data-countryIcon alt="Country Flag">
+            </div>
+            <p data-weatherDescription></p>
+            <img data-weatherIcon alt="Weather Icon">
+            <p data-temperature></p>
+            <div class="parameter">
+                <img src="/api/images/wind.png" alt="Wind Icon">
+                <p>Windspeed</p>
+                <p data-windspeed></p> <!-- Fixed typo: data-windespeed → data-windspeed -->
+            </div>
+            <div class="parameter">
+                <img src="/api/images/humidity.png" alt="Humidity Icon">
+                <p>Humidity</p>
+                <p data-humidity></p>
+            </div>
+            <div class="parameter">
+                <img src="/api/images/cloud.png" alt="Cloud Icon">
+                <p>Clouds</p>
+                <p data-cloudiness></p> <!-- Fixed typo: data-cloudeness → data-cloudiness -->
+            </div>
         </div>
     </div>
-      
+    
     <script src="/api/script.js"></script>
 </body>
 </html>
